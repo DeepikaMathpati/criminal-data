@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+<body>
+
+<h2>Criminal Detail</h2>
+
+<p><strong>ID:</strong> {{ criminal[0] }}</p>
+<p><strong>Name:</strong> {{ criminal[1] }}</p>
+<p><strong>Age:</strong> {{ criminal[2] }}</p>
+<p><strong>Gender:</strong> {{ criminal[3] }}</p>
+
+<p><strong>Total crimes:</strong> {{ crime_count }}</p>
+<p><a href="/crimes?criminal_id={{ criminal[0] }}">View crimes for {{ criminal[1] }}</a></p>
+<p><a href="/criminals">Back to criminals</a></p>
+
+</body>
+</html>

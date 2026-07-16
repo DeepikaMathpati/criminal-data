@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+<body>
+
+<h2>Edit Crime {{ crime[0] }}</h2>
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+
+<form action="/crime/edit/{{ crime[0] }}" method="post">
+
+Crime Type:
+<input type="text" name="crime_type" value="{{ crime[1] }}">
+
+<br><br>
+
+Date:
+<input type="date" name="crime_date" value="{{ crime[2] }}">
+
+<br><br>
+
+Time:
+<input type="time" name="crime_time" value="{{ crime[3] }}">
+
+<br><br>
+
+Location (address):
+<input type="text" name="location" value="{{ crime[4] }}">
+
+<br><br>
+
+Location ID (numeric):
+<input type="number" name="location_id" value="{{ crime[5] }}">
+
+<br><br>
+
+Criminal ID:
+<input type="number" name="criminal_id" value="{{ crime[6] if crime|length > 6 else '' }}">
+
+<br><br>
+
+<button type="submit">Save</button>
+
+</form>
+
+</body>
+</html>

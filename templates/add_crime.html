@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+<body>
+
+<h2>Add Crime</h2>
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+
+<form action="/crime" method="post">
+
+Crime ID:
+<input type="number" name="crime_id">
+
+<br><br>
+
+Crime Type:
+<input type="text" name="crime_type">
+
+<br><br>
+
+Date:
+<input type="date" name="crime_date">
+
+<br><br>
+
+Time:
+<input type="time" name="crime_time">
+
+<br><br>
+
+Location (address):
+<input type="text" name="location">
+
+<br><br>
+
+Location ID (numeric):
+<input type="number" name="location_id" required>
+
+<br><br>
+
+
+Criminal ID:
+<input type="number" name="criminal_id">
+
+<br><br>
+
+<button type="submit">
+Save
+</button>
+
+</form>
+
+</body>
+</html>

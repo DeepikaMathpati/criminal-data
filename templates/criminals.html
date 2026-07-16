@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+<body>
+
+<h2>Search Criminals</h2>
+
+<form method="get" action="/criminals">
+    <input type="text" name="name" placeholder="Criminal name" value="{{ filter_name }}">
+    <button type="submit">Search</button>
+</form>
+
+<table border="1">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Age</th>
+<th>Gender</th>
+<th>Actions</th>
+</tr>
+
+{% for c in criminals %}
+<tr>
+<td>{{ c[0] }}</td>
+<td>{{ c[1] }}</td>
+<td>{{ c[2] }}</td>
+<td>{{ c[3] }}</td>
+<td>
+  <a href="/criminal/{{ c[0] }}">View</a>
+  <form action="/criminal/delete/{{ c[0] }}" method="post" style="display:inline" onsubmit="return confirm('Delete criminal {{ c[1] }}?');">
+    <button type="submit">Delete</button>
+  </form>
+  <a href="/criminal">Add</a>
+  
+  
+</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+<body>
+
+<h2>Crime Records</h2>
+
+<form method="get" action="/crimes">
+    Crime Type: <input type="text" name="crime_type" value="{{ filters.crime_type }}">
+    Date: <input type="date" name="date" value="{{ filters.date }}">
+    Location: <input type="text" name="location" value="{{ filters.location }}">
+    Criminal Name: <input type="text" name="criminal" value="{{ filters.criminal }}">
+    Criminal ID: <input type="number" name="criminal_id" value="{{ filters.criminal_id }}">
+    <button type="submit">Filter</button>
+    <a href="/crimes"><button type="button">Clear</button></a>
+</form>
+
+<table border="1">
+<tr>
+<th>ID</th>
+<th>Type</th>
+<th>Date</th>
+<th>Time</th>
+<th>Location (address)</th>
+<th>Location ID</th>
+<th>Criminal</th>
+<th>Actions</th>
+</tr>
+
+{% if crimes %}
+    {% for crime in crimes %}
+    <tr>
+    <td>{{ crime[0] }}</td>
+    <td>{{ crime[1] }}</td>
+    <td>{{ crime[2] }}</td>
+    <td>{{ crime[3] }}</td>
+    <td>{% if crime[4] %}{{ crime[4] }}{% else %}Unknown{% endif %}</td>
+    <td>{{ crime[5] }}</td>
+    <td>{% if crime[6] %}{{ crime[6] }}{% else %}Unknown{% endif %}</td>
+    <td>
+        <a href="/crime/edit/{{ crime[0] }}">Edit</a>
+        <form action="/crime/delete/{{ crime[0] }}" method="post" onsubmit="return confirm('Delete crime {{ crime[0] }}?');" style="display:inline">
+            <button type="submit">Delete</button>
+        </form>
+    </td>
+    </tr>
+    {% endfor %}
+{% else %}
+    <tr>
+        <td colspan="8">No crime records found.</td>
+    </tr>
+{% endif %}
+
+</table>
+
+</body>
+</html>

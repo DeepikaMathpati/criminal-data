@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Crime Data Analysis System</title>
+<link rel="stylesheet" href="/static/style.css">
+<style>
+    .welcome-section {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #d63031;
+    }
+
+    .welcome-section p {
+        font-size: 18px;
+        color: #b0b0b0;
+        line-height: 1.6;
+        margin: 15px 0;
+    }
+
+    .stats-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin: 40px 0;
+    }
+
+    .stat-card {
+        background: #252d3d;
+        border-left: 4px solid #d63031;
+        padding: 25px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(214, 48, 49, 0.3);
+    }
+
+    .stat-number {
+        font-size: 36px;
+        color: #ff6b6b;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .stat-label {
+        color: #b0b0b0;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .features-section {
+        margin-top: 50px;
+    }
+
+    .features-section h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .feature-card {
+        background: #252d3d;
+        padding: 25px;
+        border-radius: 8px;
+        border: 1px solid #34495e;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+        border-color: #d63031;
+        box-shadow: 0 8px 25px rgba(214, 48, 49, 0.3);
+    }
+
+    .feature-title {
+        color: #ff6b6b;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .feature-desc {
+        color: #b0b0b0;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .quick-access {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .quick-access h3 {
+        color: #ff6b6b;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>CRIME DATA ANALYSIS SYSTEM</h1>
+
+<div class="welcome-section">
+    <p>Welcome to the Crime Data Management and Analysis Platform</p>
+    <p>Manage and track criminal records with comprehensive data analysis capabilities</p>
+</div>
+
+<div class="nav">
+    <a href="/criminal">Add Criminal</a>
+    <a href="/criminals">Criminal Search</a>
+    <a href="/crime">Add Crime</a>
+    <a href="/crimes">View Crimes</a>
+</div>
+
+
+<div class="features-section">
+    <h2>KEY FEATURES</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-title">📋 Record Management</div>
+            <div class="feature-desc">Efficiently manage and organize criminal records with complete data entry and validation.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-title">🔍 Advanced Search</div>
+            <div class="feature-desc">Quick search and filter capabilities to locate specific criminal or crime records instantly.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-title">📊 Data Analysis</div>
+            <div class="feature-desc">Comprehensive analysis and reporting tools for crime data intelligence and pattern detection.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-title">🔐 Secure Access</div>
+            <div class="feature-desc">Protected database access with audit trails and comprehensive data integrity measures.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-title">⚡ Fast Performance</div>
+            <div class="feature-desc">Optimized queries and indexing for rapid data retrieval and system response times.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-title">📱 Responsive Design</div>
+            <div class="feature-desc">Seamless experience across all devices with intuitive user interface and navigation.</div>
+        </div>
+    </div>
+</div>
+
+<div class="quick-access">
+    <h3>Quick Access</h3>
+    <p style="color: #b0b0b0; margin-bottom: 20px;">Select an option below to begin:</p>
+</div>
+
+</div>
+</body>
+</html>

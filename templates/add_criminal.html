@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+<body>
+
+<h2>Add Criminal</h2>
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+
+<form action="/criminal" method="post">
+
+ID:
+<input type="number" name="criminal_id">
+
+<br><br>
+
+Name:
+<input type="text" name="name">
+
+<br><br>
+
+Age:
+<input type="number" name="age">
+
+<br><br>
+
+Gender:
+<input type="text" name="gender">
+
+<br><br>
+
+<button type="submit">
+Save
+</button>
+
+</form>
+
+</body>
+</html>
